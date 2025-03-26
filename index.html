@@ -1,0 +1,439 @@
+footer and contact section make mobile responsive:-   <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhanu Pratap Singh - WordPress Developer Portfolio</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    h1, h2, h3 {
+      color: #c90000;
+    }
+
+/* Navigation */
+    nav {
+      background-color: #c90000;
+      padding: 15px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #ffcccb;
+    }
+
+    /* Mobile Menu */
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav div {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #c90000;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 10%;
+      }
+
+      nav div a {
+        margin: 10px 0;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    /* Hero Section */
+    #hero {
+      background-color: #f9f9f9;
+      text-align: center;
+      padding-top: 150px;
+    }
+
+    #hero h1 {
+      font-size: 48px;
+    }
+
+    #hero p {
+      margin: 20px 0;
+      font-size: 20px;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      #hero h1 {
+        font-size: 36px;
+      }
+
+      #hero p {
+        font-size: 18px;
+      }
+    }
+
+    .btn {
+      background-color: #c90000;
+      color: white;
+      text-decoration: none;
+      padding: 15px 40px;
+      border-radius: 30px;
+      margin: 10px;
+      display: inline-block;
+      font-size: 18px;
+      transition: transform 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #a00000;
+      transform: translateY(-5px);
+    }
+    
+    /* About Section */
+    #about {
+      background-color: #fff0f0;
+      border-radius: 15px;
+      padding: 60px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+
+    #about p {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.8;
+    }
+    
+    /* Skills Section */
+    #skills {
+      background-color: #fff0f0;
+      border-radius: 15px;
+      padding: 60px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+
+    .skills-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .skill-badge {
+      background-color: #c90000;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      transition: transform 0.3s;
+    }
+
+    .skill-badge:hover {
+      transform: translateY(-5px);
+      background-color: #a00000;
+    }
+
+    /* Experience Section */
+    #experience div {
+      margin-bottom: 40px;
+      background-color: #fff0f0;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    #experience div:hover {
+      transform: scale(1.02);
+    }
+
+    /* Projects Section */
+    #projects {
+      background-color: #f9f9f9;
+    }
+
+    .project-card {
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card a {
+      color: #c90000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .project-card a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Contact Section */
+    #contact div {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: #c90000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <span style="color:white; font-weight: bold;">Bhanu Pratap Singh</span>
+    <div>
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <h1>Hi, I'm Bhanu Pratap Singh</h1>
+    <p>WordPress Developer with 4 Years of Experience</p>
+    <a href="#projects" class="btn">View My Work</a>
+    <a href="mailto:bhanubhanu7737@gmail.com" class="btn">Contact Me</a>
+  </section>
+  
+  <!-- About Section - Redesigned -->
+<section id="about" style="background-color: #fff0f0; border-radius: 15px; padding: 60px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+  <h2 style="text-align: center; margin-bottom: 30px; color: #c90000; font-size: 36px;">About Me</h2>
+  <div style="display: flex; align-items: center; justify-content: center; gap: 40px;">
+    <img src="https://media.licdn.com/dms/image/v2/C5603AQGNO3y1dRovqA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1597858827325?e=1748476800&v=beta&t=QmQM79_FDSvIShpyCnSLmwqTUCsVAHnbLd5kiDEihJc" alt="Bhanu Pratap Singh" style="border-radius: 50%; width: 250px; height: 250px; object-fit: cover; border: 5px solid #c90000;">
+    <div>
+      <p style="font-size: 18px; color: #555; line-height: 1.8;">
+        Hi, I'm <strong>Bhanu Pratap Singh</strong>, a passionate <span style="color: #c90000;">WordPress Developer</span> with 4 years of experience. I specialize in creating <strong>custom WordPress themes</strong> and plugins, providing seamless e-commerce solutions using <strong>WooCommerce</strong>, and ensuring responsive and accessible websites.
+      </p>
+      <p style="font-size: 18px; color: #555; line-height: 1.8;">
+        I am committed to delivering high-quality projects that drive results. Let's connect and transform your ideas into exceptional digital experiences!
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+  <section id="skills">
+    <h2 style="text-align: center; margin-bottom: 30px; color: #c90000; font-size: 36px;">Skills</h2>
+    <div class="skills-container">
+      <span class="skill-badge">HTML</span>
+      <span class="skill-badge">CSS</span>
+      <span class="skill-badge">JavaScript</span>
+      <span class="skill-badge">PHP</span>
+      <span class="skill-badge">Node.js</span>
+      <span class="skill-badge">WordPress</span>
+      <span class="skill-badge">MySQL</span>
+      <span class="skill-badge">jQuery</span>
+    </div>
+  </section>
+
+<!-- Experience Section -->
+<section id="experience" style="background-color: #fff; padding: 60px;">
+  <h2 style="text-align: center; margin-bottom: 30px; color: #c90000;">Experience</h2>
+  <div style="position: relative; margin-left: 30px;">
+    <div style="border-left: 3px solid #c90000; padding-left: 20px;">
+      <div style="margin-bottom: 40px;">
+        <h3>WordPress Developer - Red Symbol Technologies Pvt. Ltd.</h3>
+        <p>Feb 2023 - Present</p>
+        <ul>
+          <li>Developed and maintained custom WordPress themes and plugins.</li>
+          <li>Integrated WooCommerce for client e-commerce stores.</li>
+        </ul>
+      </div>
+      
+      <div style="margin-bottom: 40px;">
+        <h3>WordPress Developer - Motion Education Pvt. Ltd.</h3>
+        <p>Feb 2022 - Sep 2022</p>
+        <ul>
+          <li>Designed responsive web pages using Elementor and custom HTML/CSS.</li>
+        </ul>
+      </div>
+      
+      <div style="margin-bottom: 40px;">
+        <h3>WordPress Developer - Infigo Software</h3>
+        <p>Oct 2020 - Jan 2022 </p>
+        <ul>
+          <li>Developed and maintained custom WordPress themes and plugins.</li>
+          <li>Integrated WooCommerce for client e-commerce stores.</li>
+        </ul>
+      </div>
+      
+      <div style="margin-bottom: 40px;">
+        <h3>Software Engineer Intern - SBFC Finance Pvt. Ltd.</h3>
+        <p>Jul 2020 - Sep 2020 </p>
+        <ul>
+          <li>Designed responsive web pages using Elementor and custom HTML/CSS.</li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" style="background-color: #f9f9f9; padding: 60px;">
+  <h2 style="text-align: center; margin-bottom: 30px; color: #c90000; font-size: 36px;">My Projects</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+    
+    <!-- Project Card -->
+    <div class="project-card" style="background-color: #fff; padding: 20px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); overflow: hidden;">
+      <h3>Markito Theme</h3>
+      <p>A responsive WordPress theme for e-commerce stores using WooCommerce.</p>
+      <a href="https://wordpress.org/themes/markito/" style="display: inline-flex; align-items: center; color: #c90000; text-decoration: none; font-weight: bold;">
+        View Project <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+      </a>
+    </div>
+
+    <div class="project-card" style="background-color: #fff; padding: 20px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); overflow: hidden;">
+      <h3>Tripify Theme</h3>
+      <p>Designed for travel blogs and agencies with seamless booking integration.</p>
+      <a href="https://wordpress.org/themes/tripify/" style="display: inline-flex; align-items: center; color: #c90000; text-decoration: none; font-weight: bold;">
+        View Project <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+      </a>
+    </div>
+
+    <div class="project-card" style="background-color: #fff; padding: 20px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); overflow: hidden;">
+      <h3>Wheelify Theme</h3>
+      <p>An automobile-focused theme with features for showcasing cars and dealers.</p>
+      <a href="https://wordpress.org/themes/wheelify/" style="display: inline-flex; align-items: center; color: #c90000; text-decoration: none; font-weight: bold;">
+        View Project <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+      </a>
+    </div>
+
+    <div class="project-card" style="background-color: #fff; padding: 20px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); overflow: hidden;">
+      <h3>Trucker Theme</h3>
+      <p>Custom WordPress theme designed for logistics and transport companies.</p>
+      <a href="https://wordpress.org/themes/wp-trucker/" style="display: inline-flex; align-items: center; color: #c90000; text-decoration: none; font-weight: bold;">
+        View Project <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" style="background-color: #fff; padding: 60px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+  <h2 style="text-align: center; margin-bottom: 30px; color: #c90000; font-size: 36px;">Contact Me</h2>
+  <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; justify-content: center;">
+    <!-- Contact Card -->
+    <div style="background-color: #fff0f0; padding: 30px; border-radius: 15px; display: flex; align-items: center; gap: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+      <i class="bi bi-envelope" style="font-size: 20px; color: #c90000;"></i>
+      <a href="mailto:bhanubhanu7737@gmail.com" style="color: #555; text-decoration: none; font-size: 16px;">bhanubhanu7737@gmail.com</a>
+    </div>
+
+    <div style="background-color: #fff0f0; padding: 30px; border-radius: 15px; display: flex; align-items: center; gap: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+      <i class="bi bi-telephone" style="font-size: 20px; color: #c90000;"></i>
+      <a href="tel:+918619804757" style="color: #555; text-decoration: none; font-size:16px;">+91 8619804757</a>
+    </div>
+
+    <div style="background-color: #fff0f0; padding: 30px; border-radius: 15px; display: flex; align-items: center; gap: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+      <i class="bi bi-linkedin" style="font-size: 20px; color: #c90000;"></i>
+      <a href="https://linkedin.com/in/bhanu9672" style="color: #555; text-decoration: none; font-size: 16px;">linkedin.com/in/bhanu9672</a>
+    </div>
+
+    <div style="background-color: #fff0f0; padding: 30px; border-radius: 15px; display: flex; align-items: center; gap: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+      <i class="bi bi-github" style="font-size: 20px; color: #c90000;"></i>
+      <a href="https://github.com/bhanu9672" style="color: #555; text-decoration: none; font-size: 16px;">github.com/bhanu9672</a>
+    </div>
+  </div>
+
+  <style>
+    @media (max-width: 1200px) {
+      #contact > div {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      #contact > div {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</section>
+
+<!-- Footer Section -->
+<footer style="background-color: #c90000; padding: 15px 10%; border-top: 3px solid #a00000;">
+  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+    <span style="color: white; font-weight: bold; font-size: 24px;">Bhanu Pratap Singh</span>
+    <div>
+      <a href="#hero" style="color: white; text-decoration: none; margin-left: 20px;">Home</a>
+      <a href="#about" style="color: white; text-decoration: none; margin-left: 20px;">About</a>
+      <a href="#skills" style="color: white; text-decoration: none; margin-left: 20px;">Skills</a>
+      <a href="#experience" style="color: white; text-decoration: none; margin-left: 20px;">Experience</a>
+      <a href="#projects" style="color: white; text-decoration: none; margin-left: 20px;">Projects</a>
+      <a href="#contact" style="color: white; text-decoration: none; margin-left: 20px;">Contact</a>
+    </div>
+  </div>
+  <p style="text-align: center; margin-top: 20px; color: white;">&copy; 2025 Bhanu Pratap Singh. All Rights Reserved.</p>
+</footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('nav div');
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
+
+</body>
+
+</html>
