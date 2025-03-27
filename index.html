@@ -153,20 +153,79 @@ nav div.active {
       transform: translateY(-5px);
     }
     
-    /* About Section */
-    #about {
-      background-color: #fff0f0;
-      border-radius: 15px;
-      padding: 60px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-      margin-bottom: 40px;
-    }
+#about {
+    background-color: #fff0f0;
+    border-radius: 15px;
+    padding: 60px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+  }
 
-    #about p {
-      font-size: 18px;
-      color: #555;
-      line-height: 1.8;
+  #about h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #c90000;
+    font-size: 36px;
+  }
+
+  .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .profile-image {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 5px solid #c90000;
+  }
+
+  #about p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+  }
+
+  .highlight {
+    color: #c90000;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #about {
+      padding: 40px;
     }
+    .profile-image {
+      width: 200px;
+      height: 200px;
+    }
+    #about h2 {
+      font-size: 32px;
+    }
+    #about p {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #about {
+      padding: 30px;
+    }
+    .profile-image {
+      width: 150px;
+      height: 150px;
+    }
+    #about h2 {
+      font-size: 28px;
+    }
+    #about p {
+      font-size: 14px;
+    }
+  }
     
     /* Skills Section */
     #skills {
@@ -282,16 +341,16 @@ nav div.active {
     <a href="mailto:bhanubhanu7737@gmail.com" class="btn">Contact Me</a>
   </section>
   
-  <!-- About Section - Redesigned -->
-<section id="about" style="background-color: #fff0f0; border-radius: 15px; padding: 60px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
-  <h2 style="text-align: center; margin-bottom: 30px; color: #c90000; font-size: 36px;">About Me</h2>
-  <div style="display: flex; align-items: center; justify-content: center; gap: 40px;">
-    <img src="https://media.licdn.com/dms/image/v2/C5603AQGNO3y1dRovqA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1597858827325?e=1748476800&v=beta&t=QmQM79_FDSvIShpyCnSLmwqTUCsVAHnbLd5kiDEihJc" alt="Bhanu Pratap Singh" style="border-radius: 50%; width: 250px; height: 250px; object-fit: cover; border: 5px solid #c90000;">
+<!-- About Section - Responsive -->
+<section id="about">
+  <h2>About Me</h2>
+  <div class="about-container">
+    <img src="https://media.licdn.com/dms/image/v2/C5603AQGNO3y1dRovqA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1597858827325?e=1748476800&v=beta&t=QmQM79_FDSvIShpyCnSLmwqTUCsVAHnbLd5kiDEihJc" alt="Bhanu Pratap Singh" class="profile-image">
     <div>
-      <p style="font-size: 18px; color: #555; line-height: 1.8;">
-        Hi, I'm <strong>Bhanu Pratap Singh</strong>, a passionate <span style="color: #c90000;">WordPress Developer</span> with 4 years of experience. I specialize in creating <strong>custom WordPress themes</strong> and plugins, providing seamless e-commerce solutions using <strong>WooCommerce</strong>, and ensuring responsive and accessible websites.
+      <p>
+        Hi, I'm <strong>Bhanu Pratap Singh</strong>, a passionate <span class="highlight">WordPress Developer</span> with 4 years of experience. I specialize in creating <strong>custom WordPress themes</strong> and plugins, providing seamless e-commerce solutions using <strong>WooCommerce</strong>, and ensuring responsive and accessible websites.
       </p>
-      <p style="font-size: 18px; color: #555; line-height: 1.8;">
+      <p>
         I am committed to delivering high-quality projects that drive results. Let's connect and transform your ideas into exceptional digital experiences!
       </p>
     </div>
@@ -440,7 +499,7 @@ nav div.active {
 <!-- Footer Section -->
 <footer style="background-color: #c90000; padding: 15px 10%; border-top: 3px solid #a00000;">
   <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-    <span style="color: white; font-weight: bold; font-size: 24px;">Bhanu Pratap Singh</span>
+    <span style="text-align: center;color: white; font-weight: bold; font-size: 24px;">Bhanu Pratap Singh</span>
     <div>
       <a href="#hero" style="color: white; text-decoration: none; margin-left: 20px;">Home</a>
       <a href="#about" style="color: white; text-decoration: none; margin-left: 20px;">About</a>
