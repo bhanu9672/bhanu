@@ -5,20 +5,238 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bhanu Pratap Singh - WordPress Developer Portfolio</title>
-  <meta name="description" content="Portfolio of Bhanu Pratap Singh, a skilled WordPress Developer with 4 years of experience in custom theme development, plugins, and WooCommerce solutions.">
-  <meta name="keywords" content="WordPress Developer, Web Developer, WooCommerce Expert, PHP Developer, Frontend Developer, Backend Developer">
-  <meta name="author" content="Bhanu Pratap Singh">
-
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    h1, h2, h3 {
+      color: #c90000;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #c90000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      color: white;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #ffcccb;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav div {
+        display: none;
+      }
+
+      nav div.active {
+        display: flex;
+        flex-direction: column;
+        background-color: #c90000;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+      }
+
+      nav a {
+        margin: 15px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    /* Hero Section */
+    #hero {
+      background-color: #f9f9f9;
+      text-align: center;
+      padding-top: 150px;
+    }
+
+    #hero h1 {
+      font-size: 64px;
+    }
+
+    #hero p {
+      margin: 20px 0;
+      font-size: 24px;
+      color: #555;
+    }
+
+    .btn {
+      background-color: #c90000;
+      color: white;
+      text-decoration: none;
+      padding: 15px 40px;
+      border-radius: 30px;
+      margin: 10px;
+      display: inline-block;
+      font-size: 18px;
+      transition: transform 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #a00000;
+      transform: translateY(-5px);
+    }
+
+    /* About Section */
+    #about {
+      background-color: #fff0f0;
+      border-radius: 15px;
+      padding: 60px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+
+    #about h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #c90000;
+      font-size: 36px;
+    }
+
+    .about-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .profile-image {
+      border-radius: 50%;
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border: 5px solid #c90000;
+    }
+
+    #about p {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .highlight {
+      color: #c90000;
+    }
+
+    /* Skills Section */
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .skill-badge {
+      background-color: #c90000;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 16px;
+    }
+
+    /* Experience Section */
+    #experience div {
+      margin-bottom: 40px;
+    }
+
+    #experience h3 {
+      margin-bottom: 10px;
+    }
+
+    /* Projects Section */
+    .project-card {
+      background-color: #fff0f0;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #c90000;
+      text-decoration: none;
+    }
+
+    /* Contact Section */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    input, textarea, button {
+      padding: 15px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #c90000;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    button:hover {
+      background-color: #a00000;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
 </head>
 
 <body>
-
   <!-- Navigation -->
   <nav>
-    <span style="color:white; font-weight: bold;">Bhanu Pratap Singh</span>
+    <span>Bhanu Pratap Singh</span>
     <div>
       <a href="#hero">Home</a>
       <a href="#about">About</a>
@@ -42,12 +260,8 @@
   <section id="about">
     <h2>About Me</h2>
     <div class="about-container">
-      <img src="https://media.licdn.com/dms/image/v2/C5603AQGNO3y1dRovqA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1597858827325?e=1748476800&v=beta&t=QmQM79_FDSvIShpyCnSLmwqTUCsVAHnbLd5kiDEihJc" alt="Bhanu Pratap Singh" class="profile-image">
-      <div>
-        <p>
-          Hi, I'm <strong>Bhanu Pratap Singh</strong>, a passionate <span class="highlight">WordPress Developer</span> with 4 years of experience. I specialize in creating <strong>custom WordPress themes</strong> and plugins, providing seamless e-commerce solutions using <strong>WooCommerce</strong>, and ensuring responsive and accessible websites.
-        </p>
-      </div>
+      <img src="https://media.licdn.com/dms/image/v2/C5603AQGNO3y1dRovqA/profile-displayphoto-shrink_800_800/0/1597858827325" alt="Bhanu Pratap Singh" class="profile-image">
+      <p>I'm a passionate WordPress Developer specializing in custom themes, plugins, and WooCommerce solutions.</p>
     </div>
   </section>
 
@@ -59,54 +273,7 @@
       <span class="skill-badge">CSS</span>
       <span class="skill-badge">JavaScript</span>
       <span class="skill-badge">PHP</span>
-      <span class="skill-badge">Node.js</span>
       <span class="skill-badge">WordPress</span>
-      <span class="skill-badge">MySQL</span>
-      <span class="skill-badge">jQuery</span>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience">
-    <h2>Experience</h2>
-    <div>
-      <h3>WordPress Developer - Red Symbol Technologies Pvt. Ltd.</h3>
-      <p>Feb 2023 - Present</p>
-      <ul>
-        <li>Developed and maintained custom WordPress themes and plugins.</li>
-        <li>Integrated WooCommerce for client e-commerce stores.</li>
-      </ul>
-    </div>
-    <div>
-      <h3>WordPress Developer - Motion Education Pvt. Ltd.</h3>
-      <p>Feb 2022 - Sep 2022</p>
-      <ul>
-        <li>Worked on WordPress-based LMS projects.</li>
-        <li>Designed and implemented custom themes for educational platforms.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>My Projects</h2>
-    <div>
-      <div class="project-card">
-        <h3>Markito Theme</h3>
-        <a href="https://wordpress.org/themes/markito/" target="_blank">View Project</a>
-      </div>
-      <div class="project-card">
-        <h3>Tripify Theme</h3>
-        <a href="https://wordpress.org/themes/tripify/" target="_blank">View Project</a>
-      </div>
-      <div class="project-card">
-        <h3>Wheelify Theme</h3>
-        <a href="https://wordpress.org/themes/wheelify/" target="_blank">View Project</a>
-      </div>
-      <div class="project-card">
-        <h3>Trucker Theme</h3>
-        <a href="https://wordpress.org/themes/wp-trucker/" target="_blank">View Project</a>
-      </div>
     </div>
   </section>
 
@@ -121,7 +288,7 @@
     </form>
   </section>
 
-  <!-- Footer Section -->
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Bhanu Pratap Singh. All Rights Reserved.</p>
   </footer>
