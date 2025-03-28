@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhanu Pratap Singh - WordPress Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Bhanu Pratap Singh, a skilled WordPress Developer with 4 years of experience in custom theme development, plugins, and WooCommerce solutions.">
+  <meta name="keywords" content="WordPress Developer, Web Developer, WooCommerce Expert, PHP Developer, Frontend Developer, Backend Developer">
+  <meta name="author" content="Bhanu Pratap Singh">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <span style="color:white; font-weight: bold;">Bhanu Pratap Singh</span>
+    <div>
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <h1>Hi, I'm Bhanu Pratap Singh</h1>
+    <p>WordPress Developer with 4 Years of Experience</p>
+    <a href="#projects" class="btn">View My Work</a>
+    <a href="#contact" class="btn">Contact Me</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <img src="https://media.licdn.com/dms/image/v2/C5603AQGNO3y1dRovqA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1597858827325?e=1748476800&v=beta&t=QmQM79_FDSvIShpyCnSLmwqTUCsVAHnbLd5kiDEihJc" alt="Bhanu Pratap Singh" class="profile-image">
+      <div>
+        <p>
+          Hi, I'm <strong>Bhanu Pratap Singh</strong>, a passionate <span class="highlight">WordPress Developer</span> with 4 years of experience. I specialize in creating <strong>custom WordPress themes</strong> and plugins, providing seamless e-commerce solutions using <strong>WooCommerce</strong>, and ensuring responsive and accessible websites.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <span class="skill-badge">HTML</span>
+      <span class="skill-badge">CSS</span>
+      <span class="skill-badge">JavaScript</span>
+      <span class="skill-badge">PHP</span>
+      <span class="skill-badge">Node.js</span>
+      <span class="skill-badge">WordPress</span>
+      <span class="skill-badge">MySQL</span>
+      <span class="skill-badge">jQuery</span>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <div>
+      <h3>WordPress Developer - Red Symbol Technologies Pvt. Ltd.</h3>
+      <p>Feb 2023 - Present</p>
+      <ul>
+        <li>Developed and maintained custom WordPress themes and plugins.</li>
+        <li>Integrated WooCommerce for client e-commerce stores.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>WordPress Developer - Motion Education Pvt. Ltd.</h3>
+      <p>Feb 2022 - Sep 2022</p>
+      <ul>
+        <li>Worked on WordPress-based LMS projects.</li>
+        <li>Designed and implemented custom themes for educational platforms.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div>
+      <div class="project-card">
+        <h3>Markito Theme</h3>
+        <a href="https://wordpress.org/themes/markito/" target="_blank">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>Tripify Theme</h3>
+        <a href="https://wordpress.org/themes/tripify/" target="_blank">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>Wheelify Theme</h3>
+        <a href="https://wordpress.org/themes/wheelify/" target="_blank">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>Trucker Theme</h3>
+        <a href="https://wordpress.org/themes/wp-trucker/" target="_blank">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Bhanu Pratap Singh. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('nav div').classList.toggle('active');
+    }
+  </script>
+
+</body>
+
+</html>
