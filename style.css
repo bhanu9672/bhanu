@@ -385,6 +385,13 @@
       gap: 20px;
     }
 
+    section#contact {
+       background-color: #f9f9f9;
+       padding: 60px 10%;
+       border-radius: 15px;
+       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+   }
+
     /* Footer */
     footer {
       background-color: #c90000;
