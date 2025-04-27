@@ -95,7 +95,7 @@ nav a:hover {
 #hero {
   background-color: #f9f9f9;
   text-align: center;
-  padding-top: 150px 10%;
+  padding: 150px 10%;
 }
 
 #hero h1 {
