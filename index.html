@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="style.css"> <!-- It's better to move large CSS to a separate file -->
 </head>
 <body>
-
+  
   <!-- Navigation -->
   <nav>
     <span class="logo">Bhanu Pratap Singh</span>
@@ -27,16 +27,14 @@
     <span class="menu-toggle" onclick="toggleMenu()">☰</span>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <h1>Hi, I'm Bhanu Pratap Singh</h1>
-    <p>WordPress Developer with 4 Years of Experience</p>
-    <a href="#projects" class="btn">View My Work</a>
-    <a href="#contact" class="btn">Contact Me</a>
-    <a href="bhanu_pratap_singh.pdf" class="btn" download>
-      <i class="bi bi-download" style="font-size: 20px; padding: 10px;"></i>Resume
-    </a>
-  </section>
+<!-- Hero Section -->
+<section id="hero">
+  <h1>Hi, I'm Bhanu Pratap Singh</h1>
+  <p>WordPress Developer with 4 Years of Experience</p>
+  <a href="#projects" class="btn">View My Work</a>
+  <a href="#contact" class="btn">Contact Me</a>
+  <a href="bhanu_pratap_singh.pdf" class="btn" download><i class="bi bi-download" style="font-size: 20px;padding: 10px;"></i>Resume</a>
+</section>
 
   <!-- About Section -->
   <section id="about">
@@ -56,7 +54,7 @@
 
   <!-- Skills Section -->
   <section id="skills">
-    <h2>Skills</h2>
+    <h2 style="text-align: center; margin-bottom: 30px; color: #c90000; font-size: 36px;">Skills</h2>
     <div class="skills-container">
       <span class="skill-badge">HTML</span>
       <span class="skill-badge">CSS</span>
@@ -68,97 +66,233 @@
       <span class="skill-badge">jQuery</span>
     </div>
   </section>
-
-  <!-- Experience Section -->
-  <section id="experience">
-    <h2>Experience</h2>
-    <div>
-      <div class="experience-entry">
-        <h3>WordPress Developer - Red Symbol Technologies Pvt. Ltd.</h3>
-        <p>Feb 2023 - Present</p>
-        <ul>
-          <li>Developed and maintained custom WordPress themes and plugins.</li>
-          <li>Integrated WooCommerce for client e-commerce stores.</li>
-        </ul>
-      </div>
-
-      <div class="experience-entry">
-        <h3>WordPress Developer - Motion Education Pvt. Ltd.</h3>
-        <p>Feb 2022 - Sep 2022</p>
-        <ul>
-          <li>Worked on WordPress-based LMS projects.</li>
-          <li>Designed and implemented custom themes for educational platforms.</li>
-        </ul>
-      </div>
-
-      <div class="experience-entry">
-        <h3>WordPress Developer - Infingo Software Pvt. Ltd.</h3>
-        <p>Nov 2020 - Jan 2022</p>
-        <ul>
-          <li>Built custom websites for small businesses and startups.</li>
-          <li>Customized plugins and WooCommerce integrations.</li>
-        </ul>
-      </div>
-
-      <div class="experience-entry">
-        <h3>Software Developer - SBFC Finance Pvt. Ltd.</h3>
-        <p>Jul 2020 - Sep 2020</p>
-        <ul>
-          <li>Worked on internal CRM systems based on PHP and MySQL.</li>
-          <li>Optimized databases and improved web app functionalities.</li>
-        </ul>
+  
+<!-- Experience Section -->
+<section id="experience">
+    <h2 style="text-align: center; margin-bottom: 30px; color: #c90000; font-size: 36px;">Experience</h2>
+    <div style="position: relative;">
+      <div>
+        <!-- Experience Entry 1 -->
+        <div style="margin: 30px;">
+          <h3 style="font-size: 24px;">WordPress Developer - Red Symbol Technologies Pvt. Ltd.</h3>
+          <p style="font-size: 18px;">Feb 2023 - Present</p>
+          <ul style="font-size: 16px;">
+            <li>Developed and maintained custom WordPress themes and plugins.</li>
+            <li>Integrated WooCommerce for client e-commerce stores.</li>
+          </ul>
+        </div>
+        <!-- Experience Entry 2 -->
+        <div style="margin: 30px;">
+          <h3 style="font-size: 24px;">WordPress Developer - Motion Education Pvt. Ltd.</h3>
+          <p style="font-size: 18px;">Feb 2022 - Sep 2022</p>
+          <ul style="font-size: 16px;">
+            <li>Worked on WordPress-based LMS projects.</li>
+            <li>Designed and implemented custom themes for educational platforms.</li>
+          </ul>
+        </div>
+        <!-- Experience Entry 3 -->
+        <div style="margin: 30px;">
+          <h3 style="font-size: 24px;">WordPress Developer - Infigo Software</h3>
+          <p style="font-size: 18px;">Oct 2020 - Jan 2022</p>
+          <ul style="font-size: 16px;">
+            <li>Developed and maintained custom WordPress themes and plugins.</li>
+            <li>Integrated WooCommerce for client e-commerce stores.</li>
+          </ul>
+        </div>
+        <!-- Experience Entry 4 -->
+        <div style="margin: 30px;">
+          <h3 style="font-size: 24px;">Software Engineer Intern - SBFC Finance Limited</h3>
+          <p style="font-size: 18px;">Jul 2020 - Sep 2020</p>
+          <ul style="font-size: 16px;">
+            <li>Worked on WordPress-based LMS projects.</li>
+            <li>Designed and implemented custom themes for educational platforms.</li>
+          </ul>
+        </div>
+        
       </div>
     </div>
   </section>
-
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="tabs-container">
-      <button class="tab-btn active" onclick="showTab('web')">Web Development</button>
-      <button class="tab-btn" onclick="showTab('ecommerce')">E-commerce</button>
+  
+<!-- Projects Section -->
+<section id="projects" style="background-color: #f9f9f9; padding: 60px;">
+  <h2 style="text-align: center; margin-bottom: 30px; color: #c90000; font-size: 36px;">My Projects</h2>
+  <div class="tabs-container">
+      <button class="tab-btn active" onclick="showTab('all', this)">All</button>
+      <button class="tab-btn" onclick="showTab('themes', this)">Themes</button>
+      <button class="tab-btn" onclick="showTab('plugins', this)">Plugins</button>
+      <button class="tab-btn" onclick="showTab('custom', this)">Custom Projects</button>
     </div>
 
-    <div id="web" class="tab-content active">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+
+  <!-- All Projects Tab (default on page load) -->
+    <div id="all" class="tab-content active">
       <div class="project-card">
-        <h3>Business Portfolio Website</h3>
-        <p>Created a sleek responsive business website with WordPress and ACF.</p>
-        <a href="#">View Project</a>
+        <h3>Portfolio Website</h3>
+        <p>Personal portfolio using custom theme development with contact form.</p>
+         <a href="#" target="_blank">
+          View Project <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+        </a>
       </div>
-    </div>
-
-    <div id="ecommerce" class="tab-content">
       <div class="project-card">
-        <h3>WooCommerce Online Store</h3>
-        <p>Developed an e-commerce site with custom checkout and product pages.</p>
-        <a href="#">View Project</a>
+        <h3>Event Management System</h3>
+        <p>A custom plugin developed for managing events, bookings, and payments.</p>
+         <a href="#" target="_blank">
+          View Project <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+        </a>
+      </div>
+      <div class="project-card">
+        <h3>Markito Theme</h3>
+        <p>Developed a custom WordPress theme named "Markito," built from scratch. The theme is lightweight, fully responsive, SEO-optimized, and designed with clean, modular code for easy scalability and maintenance. </p>
+        <a href="https://wordpress.org/themes/markito/" target="_blank">
+          View Project <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+        </a>
+      </div>
+      <div class="project-card">
+        <h3>Tripify Theme</h3>
+        <p>Tripify is a fully custom WordPress theme I developed from scratch, focused on delivering a lightweight, responsive, and SEO-optimized experience. </p>
+        <a href="https://wordpress.org/themes/tripify/" target="_blank">
+          View Project <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+        </a>
+      </div>
+      <div class="project-card">
+        <h3>Custom Booking Plugin</h3>
+        <p>Developed a WooCommerce extension for tour booking with date selection.</p>           
+        <a href="#" target="_blank">
+          View Project <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+        </a>
+      </div>
+      <div class="project-card">
+        <h3>Real Estate Website</h3>
+        <p>Custom WordPress site with ACF, AJAX filtering, and property CPT.</p>
+       <a href="#" target="_blank">
+          View Project <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+        </a>
+      </div>
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>Personal portfolio using custom theme development with contact form.</p>
+        <a href="#" target="_blank">
+          View Project <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+        </a>
+      </div>
+      <div class="project-card">
+        <h3>Event Management System</h3>
+        <p>A custom plugin developed for managing events, bookings, and payments.</p>
+        <a href="#" target="_blank">
+          View Project <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+        </a>
       </div>
     </div>
-  </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <div class="contact-wrapper">
-      <div class="contact-left">
-        <form class="contact-form">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea rows="6" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
+    <!-- Themes Tab -->
+    <div id="themes" class="tab-content">
+      <div class="project-card">
+        <h3>Markito Theme</h3>
+        <p>
+          Developed a custom WordPress theme named "Markito," built from scratch. The theme is lightweight, fully responsive, SEO-optimized, and designed with clean, modular code for easy scalability and maintenance. 
+        </p>
+        <a href="https://wordpress.org/themes/markito/" target="_blank">
+          View Project <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+        </a>
       </div>
-      <div class="contact-right">
-        <p><strong>Email:</strong> bhanu@example.com</p>
-        <p><strong>Phone:</strong> +91-1234567890</p>
-        <p><strong>Location:</strong> Jaipur, Rajasthan, India</p>
+      <div class="project-card">
+        <h3>Tripify Theme</h3>
+        <p>Tripify is a fully custom WordPress theme I developed from scratch, focused on delivering a lightweight, responsive, and SEO-optimized experience. </p>
+        <a href="https://wordpress.org/themes/tripify/" target="_blank">
+          View Project <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+        </a>
       </div>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Bhanu Pratap Singh | WordPress Developer</p>
+    <!-- Plugins Tab -->
+    <div id="plugins" class="tab-content">
+      <div class="project-card">
+        <h3>Custom Booking Plugin</h3>
+        <p>Developed a WooCommerce extension for tour booking with date selection.</p>
+        <a href="#" target="_blank">
+          View Project <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Custom Projects Tab -->
+    <div id="custom" class="tab-content">
+      <div class="project-card">
+        <h3>Real Estate Website</h3>
+        <p>Custom WordPress site with ACF, AJAX filtering, and property CPT.</p>
+        <a href="#" target="_blank">
+          View Project <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+        </a>
+      </div>
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>Personal portfolio using custom theme development with contact form.</p>
+        <a href="#" target="_blank">
+          View Project <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+        </a>
+      </div>
+      <div class="project-card">
+        <h3>Event Management System</h3>
+        <p>A custom plugin developed for managing events, bookings, and payments.</p>
+        <a href="#" target="_blank">
+          View Project <i class="bi bi-box-arrow-up-right" style="margin-left: 8px;"></i>
+        </a>
+      </div>
+    </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" style="background-color: #f9f9f9; padding: 60px 10%; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+  <h2 style="text-align: center; margin-bottom: 40px; color: #c90000; font-size: 36px; font-weight: bold;">Contact Me</h2>
+  <div class="contact-wrapper" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+    <!-- Contact Info -->
+    <div class="contact-left" style="flex: 1 1 45%; min-width: 250px; background-color: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); text-align: center;">
+      <!-- Contact Icons and Text -->
+      <div style="font-size: 18px; color: #555;">
+        <div>
+          <i class="bi bi-envelope" style="font-size: 30px; color: #c90000;"></i>
+          <p style="font-size: 16px; color: #555; margin-top: 10px;">
+            <a href="mailto:bhanubhanu7737@gmail.com" target="_blank">
+              bhanubhanu7737@gmail.com
+            </a>
+          </p>
+        </div>
+        <div>
+          <i class="bi bi-telephone" style="font-size: 30px; color: #c90000;"></i>
+          <p style="font-size: 16px; color: #555; margin-top: 10px;">
+            <a href="tel:+918619804757" target="_blank"> +91 8619804757 </a>
+          </p>
+        </div>
+        <div>
+          <i class="bi bi-linkedin" style="font-size: 30px; color: #c90000;"></i>
+          <p style="font-size: 16px; color: #555; margin-top: 10px;">
+            <a href="https://www.linkedin.com/in/bhanu9672" target="_blank">
+               linkedin.com/in/bhanu9672
+            </a>
+          </p>
+        </div>
+        <div>
+          <i class="bi bi-github" style="font-size: 30px; color: #c90000;"></i>
+          <p style="font-size: 16px; color: #555; margin-top: 10px;">
+             <a href="https://github.com/bhanu9672" target="_blank">
+               github.com/bhanu9672
+             </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Add this script for smooth scrolling effect on links -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+
+<!-- Footer Section -->
+<footer style="background-color: #c90000; padding: 15px 10%; border-top: 3px solid #a00000;">
+  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+    <span class="logo">Bhanu Pratap Singh</span>
     <div>
       <a href="#hero">Home</a>
       <a href="#about">About</a>
@@ -167,24 +301,22 @@
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </div>
-  </footer>
+  </div>
+  <p style="text-align: center; margin-top: 20px; color: white;">&copy; 2025 Bhanu Pratap Singh. All Rights Reserved.</p>
+</footer>
 
-  <!-- Script for Menu Toggle and Tabs -->
   <script>
-    function toggleMenu() {
-      const navLinks = document.querySelector('nav div');
-      navLinks.classList.toggle('active');
+    <!-- Tabs Script -->
+    function showTab(tabId, btn) {
+      const tabs = document.querySelectorAll(".tab-content");
+      const buttons = document.querySelectorAll(".tab-btn");
+      tabs.forEach(tab => tab.classList.remove("active"));
+      buttons.forEach(button => button.classList.remove("active"));
+      document.getElementById(tabId).classList.add("active");
+      btn.classList.add("active");
     }
-
-    function showTab(tabId) {
-      const tabs = document.querySelectorAll('.tab-content');
-      const buttons = document.querySelectorAll('.tab-btn');
-
-      tabs.forEach(tab => tab.classList.remove('active'));
-      buttons.forEach(btn => btn.classList.remove('active'));
-
-      document.getElementById(tabId).classList.add('active');
-      document.querySelector(`.tab-btn[onclick="showTab('${tabId}')"]`).classList.add('active');
+    function toggleMenu() {
+      document.querySelector('nav div').classList.toggle('active');
     }
   </script>
 
